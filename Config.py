@@ -1,8 +1,9 @@
 import os
+
 class Config:
 
   PROPAGATE_EXCEPTIONS = True
-  API_TITLE = 'padawans portal'
+  API_TITLE = 'capstone'
   API_VERSION = 'v1'
   OPENAPI_VERSION = '3.0.1'
   OPENAPI_URL_PREFIX = '/'

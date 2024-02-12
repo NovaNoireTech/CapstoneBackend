@@ -13,3 +13,11 @@ class MembershipSchema(Schema):
   body = fields.Str(required = True)
   timestamp = fields.DateTime(dump_only = True)
   user_id = fields.Str(required = True)
+
+
+class MembershipSchemaNested(MembershipSchema):
+  user= fields.Nested(UserSchema, dump_only = True)
+
+
+class UserSchemaNested(UserSchema):
+  membership = fields.List(fields.Nested(MembershipSchema), dump_only=True)
