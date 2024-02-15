@@ -11,6 +11,8 @@ app.config.from_object(Config)
 api= Api(app)
 CORS(app)
 
+CORS(app, resources={r"/add_user": {"origins": "http://your-react-app-origin"}})
+
 db= SQLAlchemy(app)
 migrate= Migrate(app, db)
 jwt= JWTManager(app)
